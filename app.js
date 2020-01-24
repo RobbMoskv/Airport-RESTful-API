@@ -5,9 +5,9 @@ const port = process.env.PORT || 3000;
 
 
 app.get('/', (req, res) => {
-    res.send('Welcome Gentleman');
+  res.send('Welcome Gentleman');
 });
 
 app.listen(port, () => {
-    console.log(`Running on port: ${port}`);
+  console.log(`Running on port: ${port}`);
 });
