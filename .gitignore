@@ -1,3 +1,4 @@
 /node_modules
 # Exclude Docker volume
 /database/mongo-volume
+/database/airports.json
