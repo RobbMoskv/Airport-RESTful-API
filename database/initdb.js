@@ -1,12 +1,12 @@
 db.createUser(
-    {
-        user: "admin",
-        pwd: "admin",
-        roles: [
-            {
-                role: "readWrite",
-                db: "sampleDB"
-            }
-        ]
-    }
+  {
+    user: "airportuser",
+    pwd: "airport",
+    roles: [
+      {
+        role: "readWrite",
+        db: "sampleDB",
+      }
+    ]
+  }
 );
