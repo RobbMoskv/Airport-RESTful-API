@@ -47,4 +47,4 @@ Thx to [Clavin Junes's [Medium Post](https://medium.com/faun/managing-mongodb-on
 
 ### Sample Data
 
-The used sample was copied grateful from [tdreyno](https://gist.github.com/tdreyno/4278655).
+The used sample was grateful copied from [tdreyno](https://gist.github.com/tdreyno/4278655) Github repository.
