@@ -4,6 +4,22 @@
 
 ## Backend
 
+### Instructions
+
+1) Install NPM dependencies.
+
+```bash
+npm install
+```
+
+2) Create an _.env_ file to store config data and database credentials.
+
+```bash
+# App
+ENV=development
+PORT={your-port}
+```
+
 
 
 ## Database
