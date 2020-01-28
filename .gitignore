@@ -1,4 +1,8 @@
+# NPM
 node_modules
+npm-debug.log
+
+# Config
 .env
 # Exclude Docker volume
 /database/mongo-volume
