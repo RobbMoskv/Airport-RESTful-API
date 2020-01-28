@@ -5,13 +5,15 @@ services:
     image: 'mongo'
     container_name: 'my-mongo-container2020'
     environment:
-      - MONGO_INITDB_DATABASE=sampleDB
+      - MONGO_INITDB_DATABASE=airportDb
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=admin
     volumes:
       # copy initdb.js to /docker-entrypoint-initdb.d/ as a read only file.
       - ./database/initdb.js:/docker-entrypoint-initdb.d/initdb.js:ro
-      - ./mongo-volume:/data/db
+      - ./database/mongo-volume:/data/db
+      # do db initial load
+      - ./database/airport-data.js:/docker-entrypoint-initdb.d/airport-data.js:ro
     ports:
       - '27017:27017'
 
