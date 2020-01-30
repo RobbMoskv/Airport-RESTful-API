@@ -1,4 +1,4 @@
-# Express.js REST API - Airport App :airplane:
+# :airplane: Airport App - Express.js RESTful API :airplane:
 
 ## Introduction
 
