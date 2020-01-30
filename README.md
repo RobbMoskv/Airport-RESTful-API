@@ -16,7 +16,7 @@ npm install
 
 ```bash
 # App
-ENV=development
+ENV={environment}
 PORT={your-port}
 ```
 
