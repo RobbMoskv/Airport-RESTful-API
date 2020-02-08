@@ -1,4 +1,4 @@
-# :airplane: Airport App - Express.js RESTful API :airplane:
+# Express.js App - Airport RESTful API :airplane:
 
 ## Introduction
 
@@ -20,7 +20,11 @@ ENV={environment}
 PORT={your-port}
 ```
 
+### OpenAPI
 
+```javascript
+const openapispec = YAML.load('./openapidoc.yaml');
+```
 
 ## Database
 
