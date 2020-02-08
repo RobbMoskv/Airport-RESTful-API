@@ -20,7 +20,7 @@ const db = process.env.DB;
 const url = `mongodb://${dbuser}:${dbpw}@127.0.0.1:27017/${db}`;
 
 mongoose.connect(url, { useNewUrlParser: true }).catch((err) => {
-  console.log(`Database connections failed - ${err}`);
+  console.log(`Database connection failed - ${err}`);
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,9 +30,9 @@ app.use(bodyParser.json());
 app.use('/api', airportRouter);
 
 // OpenAPI Documentation
-// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapispec));
 
+// Entry point
 app.get('/', (req, res) => {
   res.send('Welcome to the Airport API');
 });
