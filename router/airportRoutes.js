@@ -64,9 +64,43 @@ function routes(Airport) {
       airport.direct_flights = req.body.direct_flights;
       airport.carriers = req.body.carriers;
 
-      airport.save();
+      req.airport.save((err) => {
+        if (err) {
+          return res.send(err);
+        }
+        return res.json(airport);
+      });
+    })
+    .patch((req, res) => {
+      const { airport } = req;
 
-      return res.json(airport);
+      // eslint-disable-next-line no-underscore-dangle
+      if (req.body._id) {
+        // eslint-disable-next-line no-underscore-dangle
+        delete req.body._id;
+      }
+
+      // Update all existing attributes in req.body
+      Object.entries(req.body).forEach((item) => {
+        const key = item[0];
+        const value = item[1];
+        airport[key] = value;
+      });
+
+      req.airport.save((err) => {
+        if (err) {
+          return res.send(err);
+        }
+        return res.json(airport);
+      });
+    })
+    .delete((req, res) => {
+      req.airport.remove((err) => {
+        if (err) {
+          return res.send(err);
+        }
+        return res.sendStatus(204);
+      });
     });
 
   return airportRouter;
