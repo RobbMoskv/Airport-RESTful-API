@@ -37,7 +37,7 @@ function routes(Airport) {
         req.airport = airport;
         return next();
       }
-      return res.status(404);
+      return res.sendStatus(404);
     });
   });
   airportRouter.route('/airports/:id')
