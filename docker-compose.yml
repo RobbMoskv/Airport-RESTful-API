@@ -12,7 +12,7 @@ services:
       # copy initdb.js to /docker-entrypoint-initdb.d/ as a read only file.
       - ./database/initdb.js:/docker-entrypoint-initdb.d/initdb.js:ro
       - ./database/mongo-volume:/data/db
-      # do db initial load
+      # do initial db load
       - ./database/airport-data.js:/docker-entrypoint-initdb.d/airport-data.js:ro
     ports:
       - '27017:27017'
