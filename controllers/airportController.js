@@ -11,13 +11,28 @@ function airportController(Airport) {
       if (err) {
         return res.send(err);
       }
-      return res.json(airports);
+
+      // Adding hypermedia
+      const returnAirport = airports.map((airport) => {
+        const newAirport = airport.toJSON();
+        newAirport.links = {};
+        newAirport.links.self = `http://${req.headers.host}/api/airports/${airport._id}`;
+        return newAirport;
+      });
+      return res.json(returnAirport);
     });
   }
 
   // Get one single airport
   function getSingle(req, res) {
-    res.json(req.airport);
+    // Adding hypermedia
+    const newAirport = req.airport.toJSON();
+    newAirport.links = {};
+
+    const country = req.airport.country.replace(' ', '%20');
+    newAirport.links.FilterByThisCountry = `http://${req.headers.host}/api/airports?country=${country}`;
+
+    res.json(newAirport);
   }
 
   // Post Airports
