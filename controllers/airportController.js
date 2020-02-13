@@ -23,9 +23,15 @@ function airportController(Airport) {
   // Post Airports
   function post(req, res) {
     const airport = new Airport(req.body);
+
+    if (!req.body.name) {
+      res.status(400);
+      return res.send('Name is required');
+    }
     airport.save();
 
-    return res.status(201).json(airport);
+    res.status(201);
+    return res.json(airport);
   }
 
   // Update one single airport
