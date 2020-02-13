@@ -5,6 +5,8 @@
 This is simple RESTful API written in Node.js by the use of the _Express.js_ web framework.
 The API gives the opportunity to query a bunch of real Airports across the global.
 
+![Image description](./image.png)
+
 ## Backend
 
 ### Instructions
