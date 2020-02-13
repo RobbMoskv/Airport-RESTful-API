@@ -19,7 +19,7 @@ const dbpw = process.env.PW;
 const db = process.env.DB;
 const url = `mongodb://${dbuser}:${dbpw}@127.0.0.1:27017/${db}`;
 
-mongoose.connect(url, { useNewUrlParser: true }).catch((err) => {
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).catch((err) => {
   console.log(`Database connection failed - ${err}`);
 });
 
