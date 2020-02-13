@@ -13,7 +13,8 @@ describe('Airport Controller', () => {
 
   describe('Post', () => {
     it('should not allow empty Name on post', () => {
-      const Airport = function (airport) { this.save = () => {}};
+      // eslint-disable-next-line func-names
+      const Airport = function () { this.save = () => {}};
 
       const req = {
         body: {
