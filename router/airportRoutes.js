@@ -8,7 +8,7 @@ function routes(Airport) {
 
   // All airports
   airportRouter.route('/airports')
-    .get(controller.get)
+    .get(controller.getAll)
     .post(controller.post);
 
   // Single Airport
