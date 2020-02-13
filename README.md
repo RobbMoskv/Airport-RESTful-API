@@ -2,6 +2,9 @@
 
 ## Introduction
 
+This is simple RESTful API written in Node.js by the use of the _Express.js_ web framework.
+The API gives the opportunity to query a bunch of real Airports across the global.
+
 ## Backend
 
 ### Instructions
@@ -21,6 +24,8 @@ PORT={your-port}
 ```
 
 ### OpenAPI
+
+API documentation was done with the standard api documentation.
 
 ```javascript
 const openapispec = YAML.load('./openapidoc.yaml');
@@ -63,7 +68,7 @@ $ mongo -u <your username> --authenticationDatabase <your database name>
 5) Connect your app to the database by using this URL as a connection:
 > mongodb://YourUsername:YourPasswordHere@127.0.0.1:27017/your-database-name
 
-Thx to [Clavin Junes's [Medium Post](https://medium.com/faun/managing-mongodb-on-docker-with-docker-compose-26bf8a0bbae3).
+Thx to Clavin Junes's [Medium Post](https://medium.com/faun/managing-mongodb-on-docker-with-docker-compose-26bf8a0bbae3).
 
 ### Sample Data
 
